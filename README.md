@@ -6,10 +6,10 @@ Initial configure to create a docker with laravel and nginx
 |Files paths|
 |----------|
 |1.  docker|
-|1.1 - nginx|
-|1.1.1 - laravel.conf|
-|2. - docker-compose.yml|
-|3  - Dockerfile|
+|1.1 nginx|
+|1.1.1 laravel.conf|
+|2. docker-compose.yml|
+|3  Dockerfile|
 -------------- 
 
 ### Dockerfile
@@ -29,8 +29,11 @@ Inside this have all configures to create a tow containners (`laravel_8, nginx`)
 > In nginx configure your check if the ports are correct to use the system.
 >
 > `...`
+>
 > `ports:`
+>
 >  ` - (port recibe):(port send)`
+>
 >  `...`
 >
 ____
