@@ -25,20 +25,27 @@ _____
 Inside this have all configures to create a tow containners (`laravel_8, nginx`) in this case.
 
 > ***Important*** 
+>
 > In nginx configure your check if the ports are correct to use the system.
+>
 > `...`
 > `ports:`
 >  ` - (port recibe):(port send)`
 >  `...`
+>
 ____
 ### laravel.conf
 
 Inside this have all configure to `nginx` redirect request to `laravel_8:9000` 
 
 >***Important***
+>
 > Check if `listen 80` is correct;
+>
 >  `root /var/www/public` is correct path;
+>
 >  `fastcgi_pass laravel_8:9000` is correct port from `laravel`;
+>
 _____________
 
 ### Running Docker
@@ -48,5 +55,7 @@ For running docker in your system, before this configure need install docker in 
 After install Docker need install a project Laravel, for this you check a doc on [Laravel](https://laravel.com/docs/10.x/installation), you no need create other folder you can install in same path the others files. 
 
 After this you runnig this code in same path `docker-compose.yml`:
+>
 > `docker-compose up -d`
+>
 _____
