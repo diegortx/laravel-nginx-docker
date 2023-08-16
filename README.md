@@ -22,7 +22,7 @@ Inside file in first step is change the PHP version
 _____
  
 ### docker-compose.yml
-Inside this have all configures to create a tow containners (`laravel_8, nginx`) in this case.
+Inside this have all configures to create a two containners (`laravel_8`, `nginx`) in this case.
 
 > ***Important*** 
 >
