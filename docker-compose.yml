@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+    # image project
+    laravel_8:
+        build: 
+            args: 
+                user: diego
+                uid: 1000
+            context: ./
+            dockerfile: Dockerfile
+        image: laravel-app
+        restart: unless-stopped
+        working_dir: /var/www/
+        volumes:
+            - ./:/var/www
+        networks: 
+            - laravel    
+    # nginx
+    nginx:
+        image: nginx:alpine
+        restart: unless-stopped
+        ports: 
+            - 80:80
+        volumes: 
+            - ./:/var/www
+            - ./docker/nginx/:/etc/nginx/conf.d/
+        networks: 
+            - laravel
+
+networks: 
+    laravel:
+        driver: bridge
