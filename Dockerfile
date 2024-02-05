@@ -33,3 +33,9 @@ RUN mkdir -p /home/$user/.composer && \
 WORKDIR /var/www
 
 USER $user
+
+# Copy script to set appropriate .env file
+COPY set_env.sh /usr/local/bin/
+
+# Run the script when the container starts
+CMD ["/usr/local/bin/set_env.sh"]

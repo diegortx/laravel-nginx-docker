@@ -1,5 +1,9 @@
+## Autores
+
+- [@diegortx](https://github.com/diegortx)
 
 # Laravel-Nginx-Docker
+
 
 Initial configure to create a docker with laravel and nginx
 
@@ -10,6 +14,7 @@ Initial configure to create a docker with laravel and nginx
 |1.1.1 laravel.conf|
 |2. docker-compose.yml|
 |3  Dockerfile|
+|4  set_env|
 -------------- 
 
 ### Dockerfile
@@ -62,3 +67,8 @@ After this you runnig this code in same path `docker-compose.yml`:
 > `docker-compose up -d`
 >
 _____
+
+
+## 🚀 About me
+>I'm a Full Stack development, lovely learn each day more and practice every days =)
+

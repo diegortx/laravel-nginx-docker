@@ -4,15 +4,16 @@ services:
     laravel_8:
         build: 
             args: 
-                user: diego
+                user: laravel
                 uid: 1000
-            context: ./
-            dockerfile: Dockerfile
         image: laravel-app
         restart: unless-stopped
         working_dir: /var/www/
+        command: ["sh", "-c", "/usr/local/bin/set_env.sh && php-fpm"]
         volumes:
             - ./:/var/www
+        environment:
+            - APP_ENV=local
         networks: 
             - laravel    
     # nginx
